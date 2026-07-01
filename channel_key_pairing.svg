@@ -1,0 +1,48 @@
+<svg viewBox="0 0 680 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="通道與鑰匙兩條階梯的搭配圖：兩條階梯都由上到下從隱性到顯性，左邊通道從內建連接器到直接操控畫面，右邊鑰匙從免鑰匙到 OAuth，粉色線標出最隱性通道配最顯性鑰匙的首尾對調。">
+<defs>
+<marker id="ah" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#7f8db0"/></marker>
+<marker id="ahp" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#ff5fa0"/></marker>
+<marker id="dn" markerWidth="9" markerHeight="9" refX="4" refY="8" orient="auto"><path d="M0 0 L8 0 L4 8 Z" fill="#5a6e96"/></marker>
+</defs>
+<text x="340" y="30" text-anchor="middle" fill="#9fb2d6" font-family="'JetBrains Mono',monospace" font-size="15">上 = 隱性　→　下 = 顯性（兩條階梯同向）</text>
+<text x="165" y="56" text-anchor="middle" fill="#22e0ff" font-family="'Noto Sans TC',sans-serif" font-size="17" font-weight="700">通道（怎麼接）</text>
+<text x="515" y="56" text-anchor="middle" fill="#ffc23d" font-family="'Noto Sans TC',sans-serif" font-size="17" font-weight="700">鑰匙（給多大權）</text>
+
+<line x1="48" y1="86" x2="48" y2="334" stroke="#5a6e96" stroke-width="1.5" marker-end="url(#dn)"/>
+<text x="48" y="80" text-anchor="middle" fill="#9fb2d6" font-family="'Noto Sans TC',sans-serif" font-size="13">隱</text>
+<text x="48" y="352" text-anchor="middle" fill="#9fb2d6" font-family="'Noto Sans TC',sans-serif" font-size="13">顯</text>
+<line x1="632" y1="86" x2="632" y2="334" stroke="#5a6e96" stroke-width="1.5" marker-end="url(#dn)"/>
+<text x="632" y="80" text-anchor="middle" fill="#9fb2d6" font-family="'Noto Sans TC',sans-serif" font-size="13">隱</text>
+<text x="632" y="352" text-anchor="middle" fill="#9fb2d6" font-family="'Noto Sans TC',sans-serif" font-size="13">顯</text>
+
+<path d="M262 106 C350 106 350 286 416 286" stroke="#ff5fa0" stroke-width="2.5" fill="none" marker-end="url(#ahp)"/>
+<path d="M262 310 C350 310 350 106 416 106" stroke="#ff5fa0" stroke-width="2.5" fill="none" marker-end="url(#ahp)"/>
+<path d="M262 174 C350 174 350 106 416 106" stroke="#7f8db0" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<path d="M262 174 C350 174 350 196 416 196" stroke="#7f8db0" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<path d="M262 242 C350 242 350 286 416 286" stroke="#7f8db0" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+
+<g font-family="'Noto Sans TC',sans-serif">
+<rect x="70" y="80" width="192" height="52" rx="10" fill="#123047" stroke="#22e0ff" stroke-width="2"/>
+<text x="86" y="105" fill="#f4f8ff" font-size="16" font-weight="700">內建連接器</text>
+<text x="86" y="123" fill="#cdd9f0" font-size="12">藏起來的插座</text>
+<rect x="70" y="148" width="192" height="52" rx="10" fill="#123047" stroke="#22e0ff" stroke-width="2"/>
+<text x="86" y="173" fill="#f4f8ff" font-size="16" font-weight="700">MCP</text>
+<text x="86" y="191" fill="#cdd9f0" font-size="12">萬用轉接頭</text>
+<rect x="70" y="216" width="192" height="52" rx="10" fill="#123047" stroke="#22e0ff" stroke-width="2"/>
+<text x="86" y="241" fill="#f4f8ff" font-size="16" font-weight="700">CLI</text>
+<text x="86" y="259" fill="#cdd9f0" font-size="12">跑命令列驅動</text>
+<rect x="70" y="284" width="192" height="52" rx="10" fill="#123047" stroke="#22e0ff" stroke-width="2"/>
+<text x="86" y="309" fill="#f4f8ff" font-size="16" font-weight="700">直接操控畫面</text>
+<text x="86" y="327" fill="#cdd9f0" font-size="12">看它一步步點</text>
+
+<rect x="416" y="80" width="192" height="52" rx="10" fill="#3a2f12" stroke="#ffc23d" stroke-width="2"/>
+<text x="432" y="105" fill="#f4f8ff" font-size="16" font-weight="700">免鑰匙</text>
+<text x="432" y="123" fill="#cdd9f0" font-size="12">靠本機／登入狀態</text>
+<rect x="416" y="170" width="192" height="52" rx="10" fill="#3a2f12" stroke="#ffc23d" stroke-width="2"/>
+<text x="432" y="195" fill="#f4f8ff" font-size="16" font-weight="700">API Key／Token</text>
+<text x="432" y="213" fill="#cdd9f0" font-size="12">萬能長期鑰匙</text>
+<rect x="416" y="260" width="192" height="52" rx="10" fill="#3a2f12" stroke="#ffc23d" stroke-width="2"/>
+<text x="432" y="285" fill="#f4f8ff" font-size="16" font-weight="700">OAuth</text>
+<text x="432" y="303" fill="#cdd9f0" font-size="12">明確授權・可撤銷</text>
+</g>
+</svg>

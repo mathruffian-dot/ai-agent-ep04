@@ -21,13 +21,17 @@ EP04 從零規劃完成，已產出三份交付物（都在 `EP04/`）：
 - **Supabase 歸非 Google**（Firebase 的獨立替代品）。
 - 番號以實際上架線為準（EP01→02→03→04→05 Skill），忽略舊《AI Agents 10 集進階規劃》。
 
+## ✅ 已完成（2026-07-02 追加）
+
+- **Git + GitHub repo**：`mathruffian-dot/ai-agent-ep04`（**public**，因 Pages 需要），branch `master`。
+- **GitHub Pages**：已上線 → https://mathruffian-dot.github.io/ai-agent-ep04/slides.html （驗證 HTTP 200）。
+- **素材包**：`README.md`、`qr_ep04.png`（指向 Pages 簡報），簡報加了第 19 頁 QR 下載頁（總 20 頁）。
+
 ## ➡️ 下一步（未做，待決定）
 
-- [ ] 是否幫 EP04／整個 2026Agents **初始化 git + 建 GitHub 私有 repo**（目前都不是 repo）。
-- [ ] 若要上 **GitHub Pages**（像 EP03 的 slides 線上版）→ 需先建 repo。
-- [ ] **隨附素材包**：README、QR code（EP03 有範本可抄）。
 - [ ] Obsidian：可在「創作庫」新增 EP04 筆記（EP01–03 都有對應筆記）。
 - [ ] 錄製前可再做一次口白稿。
+- [ ] 影片上架後，把實際 YouTube 連結補進 README。
 
 ## ⚠️ 注意事項
 

@@ -12,7 +12,7 @@
 
 | 檔案 | 說明 |
 |------|------|
-| [`slides.html`](slides.html) | EP04 完整簡報（19 頁，可離線開啟，← → 切頁、F 全螢幕） |
+| [`slides.html`](slides.html) | EP04 完整簡報（20 頁，可離線開啟，← → 切頁、F 全螢幕） |
 | [`EP04_大綱.md`](EP04_大綱.md) | 本集完整大綱（含每段口白、口訣總表、拍攝節奏） |
 | [`channel_key_pairing.svg`](channel_key_pairing.svg) | 「通道 × 鑰匙」搭配接線圖 |
 
@@ -30,6 +30,16 @@
 
 **底層兩條軸**：通道（連接器／MCP／CLI／操控畫面）＝「怎麼接」；授權（免鑰匙／API Key／OAuth）＝「給多大權」。比喻：**通道是水管，授權是水裡流的水。**
 
+## 👩‍🏫 老師接上以後能做什麼
+
+| 服務 | 立刻有感的用法 |
+|------|----------------|
+| Google Drive | 讀教材、整理講義、產出簡報 |
+| Classroom | 發作業、抓學生名單、整理繳交狀態 |
+| Obsidian | 更新第二大腦、整理踩坑筆記 |
+| Firebase / Supabase | 幫課堂互動遊戲記分、存紀錄 |
+| Padlet | 一句話生成分區課程牆 |
+
 ## 🚀 新手起手式（今天就先接一個）
 
 | 你是哪種老師 | 先接這個 | 為什麼 |
@@ -39,6 +49,15 @@
 | 想馬上看到成果 | **NotebookLM** | 一句話生簡報／音訊，wow 點最高 |
 
 > **口訣**：別想著一次接全部——挑一個你今天就會用到的，先接起來。
+
+## 🎞️ 舊影片素材對照
+
+- GitHub／Obsidian：GPT Codex 基本功 EP03
+- Supabase：Claude 基本功 EP09
+- Firebase：Claude 基本功 EP095、GPTcodex 基本功 EP04
+- Classroom：AntiGravity 基本功 EP06
+- Padlet：AntiGravity 基本功 EP07
+- NotebookLM：Claude 基本功 EP03／EP04／EP06
 
 ## 📺 相關集數
 

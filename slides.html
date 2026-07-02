@@ -72,6 +72,17 @@ body {
   font-size: 12px; color: var(--ink-4);
   z-index: 999;
 }
+.nav-btn {
+  position: fixed; top: 50%; transform: translateY(-50%);
+  width: 44px; height: 64px; border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(17,30,68,0.62); color: var(--ink-2);
+  font-size: 34px; line-height: 1; cursor: pointer;
+  z-index: 1001; transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.nav-btn:hover { border-color: var(--accent); color: var(--ink); background: rgba(34,224,255,0.16); }
+.nav-prev { left: 18px; }
+.nav-next { right: 18px; }
 
 /* Slides */
 .slide {
@@ -236,8 +247,31 @@ table.tight td, table.tight th { padding: 9px 14px; font-size: clamp(15px,1.35vw
 
 /* Responsive */
 @media (max-width: 900px) {
-  .slide { padding: 32px 24px; }
+  :root {
+    --t1: clamp(32px, 10vw, 46px);
+    --t2: clamp(26px, 8vw, 36px);
+    --t3: clamp(19px, 5.5vw, 26px);
+    --t4: clamp(14px, 4.2vw, 18px);
+    --s1: 36px;
+    --s2: 20px;
+    --s3: 14px;
+    --s4: 8px;
+  }
+  #section-tag { top: 12px; left: 24px; font-size: 12px; letter-spacing: 1px; }
+  #pageInfo { bottom: 12px; right: 16px; font-size: 12px; }
+  #hint { display: none; }
+  .nav-btn { width: 34px; height: 48px; font-size: 26px; opacity: 0.72; }
+  .nav-prev { left: 6px; }
+  .nav-next { right: 6px; }
+  .slide { padding: 52px 24px 64px; align-items: flex-start; }
+  .slide-inner { max-width: 100%; }
   .grid-2, .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr; }
+  .card { padding: 16px; border-radius: 12px; }
+  .card .card-icon { font-size: 30px; margin-bottom: 4px; }
+  .card .card-title { font-size: 18px; }
+  .card .card-body { font-size: 14px; line-height: 1.45; }
+  table.tight td, table.tight th { padding: 6px 7px; font-size: 12px; line-height: 1.35; word-break: break-word; }
+  .highlight { padding: 12px 14px; font-size: 18px; line-height: 1.45; }
   .flow { flex-direction: column; }
   .flow .arrow { transform: rotate(90deg); }
   .matrix { grid-template-columns: 1fr; }
@@ -252,6 +286,8 @@ table.tight td, table.tight th { padding: 9px 14px; font-size: clamp(15px,1.35vw
 <div id="section-tag"></div>
 <div id="pageInfo"></div>
 <div id="hint">← → 切頁 ・ F 全螢幕 ・ 點擊畫面左右切頁</div>
+<button id="prevBtn" class="nav-btn nav-prev" type="button" title="上一頁">‹</button>
+<button id="nextBtn" class="nav-btn nav-next" type="button" title="下一頁">›</button>
 
 <!-- 1. 封面 -->
 <section class="slide active" data-slide="1" data-section="引起動機">
@@ -449,10 +485,10 @@ table.tight td, table.tight th { padding: 9px 14px; font-size: clamp(15px,1.35vw
   <h2>這些我以前都拍過，直接看那支</h2>
   <table class="tight">
     <tr><th>老師世界</th><th>服務</th><th>授權</th><th>舊影片</th></tr>
-    <tr><td>📝 第二大腦</td><td>Obsidian</td><td>本地直存（免 token）</td><td>03-建立第二大腦-Obsidian</td></tr>
-    <tr><td>🗄️ 資料庫</td><td>Supabase</td><td>MCP ＋ 金鑰</td><td>04-連接-Supabase</td></tr>
+    <tr><td>📝 第二大腦</td><td>Obsidian</td><td>本地直存（免 token）</td><td>GPT Codex EP03／Claude EP07</td></tr>
+    <tr><td>🗄️ 資料庫</td><td>Supabase</td><td>MCP ＋ 金鑰</td><td>Claude EP09</td></tr>
     <tr><td>🧱 課程互動牆</td><td>Padlet</td><td>MCP ＋ token</td><td>AntiGravity EP07</td></tr>
-    <tr><td>🐙 版本控制</td><td>GitHub</td><td>連接器 ／ gh CLI</td><td>02-連接-GitHub</td></tr>
+    <tr><td>🐙 版本控制</td><td>GitHub</td><td>連接器 ／ gh CLI</td><td>GPT Codex EP03／Claude EP05</td></tr>
   </table>
   <p class="note" style="margin-top:var(--s3)">Firebase 雖是資料庫，但屬 <b>Google 家</b>，下一段講。</p>
 </div>
@@ -482,10 +518,10 @@ table.tight td, table.tight th { padding: 9px 14px; font-size: clamp(15px,1.35vw
     <tr><th>服務</th><th>老師拿來做什麼</th><th>接法</th><th>鑰匙</th></tr>
     <tr><td>Gmail</td><td>自動寄通知／回信</td><td>連接器 ／ 自建 OAuth</td><td>OAuth</td></tr>
     <tr><td>行事曆</td><td>排課表／排程</td><td>連接器 ／ 自建 OAuth</td><td>OAuth</td></tr>
-    <tr><td>雲端硬碟</td><td>存取教材</td><td>連接器 ／ 自建 OAuth</td><td>OAuth</td></tr>
-    <tr><td>Classroom</td><td>發作業／看繳交</td><td>自建 OAuth（要寫入）</td><td>OAuth</td></tr>
+    <tr><td>雲端硬碟</td><td>讀教材、整理講義、產出簡報</td><td>連接器 ／ 自建 OAuth</td><td>OAuth</td></tr>
+    <tr><td>Classroom</td><td>發作業、抓學生名單、整理繳交</td><td>自建 OAuth（要寫入）</td><td>OAuth</td></tr>
     <tr><td>NotebookLM</td><td>教材生簡報／音訊</td><td>CLI（nlm）</td><td><span style="color:var(--accent-2)">登入式</span></td></tr>
-    <tr><td>Firebase</td><td>即時互動資料庫</td><td>MCP ／ CLI</td><td><span style="color:var(--accent-2)">服務金鑰</span></td></tr>
+    <tr><td>Firebase</td><td>即時互動資料庫、課堂遊戲記分</td><td>MCP ／ CLI</td><td><span style="color:var(--accent-2)">服務金鑰</span></td></tr>
   </table>
   <p class="note" style="margin-top:var(--s3)">上 4 個是 <b>Workspace 個資 → 一律 OAuth</b>；下 2 個是 Google 的開發／AI 工具 → <b>各走各的</b>。</p>
 </div>
@@ -495,13 +531,13 @@ table.tight td, table.tight th { padding: 9px 14px; font-size: clamp(15px,1.35vw
 <section class="slide" data-slide="13" data-section="維持注意">
 <div class="slide-inner">
   <div class="kicker">Google（Workspace）・ 四種方式 + 何時自建 OAuth</div>
-  <h2>控制力遞增：連接器 → OAuth → 服務帳號 → API Key</h2>
+  <h2>Google Workspace 接法比較：不要把 API Key 當萬能鑰匙</h2>
   <table class="tight">
-    <tr><th>方式</th><th>控制力</th><th>說明</th></tr>
-    <tr><td>原生連接器</td><td>低</td><td>OAuth 在底層跑，你只按開關；範圍被原廠框住（多半讀取）</td></tr>
-    <tr><td>自建 GCP ＋ OAuth 2.0</td><td><b style="color:var(--green)">最高</b></td><td>要寫入 / 細緻 scope（發作業、寄信）就走這條</td></tr>
-    <tr><td>Service Account</td><td>中</td><td>伺服器對伺服器；碰不到你個人 Gmail／Drive</td></tr>
-    <tr><td>API Key</td><td>⚠️ 受限</td><td>只能碰不含個資的 API（Maps、Gemini API）</td></tr>
+    <tr><th>方式</th><th>適合情境</th><th>說明</th></tr>
+    <tr><td>原生連接器</td><td>零設定讀取</td><td>OAuth 在底層跑，你只按開關；範圍被原廠框住</td></tr>
+    <tr><td>自建 GCP ＋ OAuth</td><td><b style="color:var(--green)">寫入／細緻 scope</b></td><td>要發作業、寄信、建檔就走這條</td></tr>
+    <tr><td>Service Account</td><td>伺服器自動化</td><td>適合共用資料或網域委派；碰不到個人 Gmail／Drive</td></tr>
+    <tr><td>API Key</td><td>公開資料／不碰個資</td><td>不能讀 Drive、Gmail、Classroom 個人資料</td></tr>
   </table>
   <div class="highlight" style="margin-top:var(--s3)">原生連接器＝零設定但受限；<strong>自建 OAuth＝要花工但完全掌控</strong>。（設定步驟之後做懶人包）</div>
 </div>
@@ -546,7 +582,7 @@ table.tight td, table.tight th { padding: 9px 14px; font-size: clamp(15px,1.35vw
     <div class="card warn"><div class="card-icon">🧑‍🎓</div><div class="card-title">學生資料去識別化</div><div class="card-body">接 Classroom／資料庫尤其注意，只存座號＋班級代號。</div></div>
     <div class="card warn"><div class="card-icon">🚫</div><div class="card-title">來路不明別亂裝</div><div class="card-body">MCP server／連接器會拿到你的授權，跟裝來路不明外掛一樣要小心。</div></div>
   </div>
-  <div class="highlight warn" style="margin-top:var(--s2)">接得越多，越要看清楚你把哪把鑰匙交出去了。</div>
+  <div class="highlight warn" style="margin-top:var(--s2)">不用的 token 要撤；API Key 限制用途；OAuth scope 只開需要的。</div>
 </div>
 </section>
 
@@ -610,8 +646,8 @@ table.tight td, table.tight th { padding: 9px 14px; font-size: clamp(15px,1.35vw
     <div class="card accent"><div class="card-icon">🔌</div><div class="card-title">EP04 ・ 連接外部工具（本集）</div><div class="card-body">Google 家 vs 非 Google、通道 × 授權、三步選路。</div></div>
     <div class="card accent-2"><div class="card-icon">🧩</div><div class="card-title">EP05 ・ 技能（Skill）</div><div class="card-body">把整套流程打包成一句話自動觸發，做你的專屬工作流。</div></div>
   </div>
-  <p class="sub" style="margin-top:var(--s2);font-size:var(--t3)">這集給你工具，下集幫你把工具用法變成一句話。</p>
-  <p class="note" style="margin-top:var(--s2)">三師爸 Sense Bar ・ youtube.com/@sensebar</p>
+  <p class="sub" style="margin-top:var(--s3);font-size:var(--t3)">這集給你工具，下集幫你把工具用法變成一句話。</p>
+  <p class="note" style="margin-top:var(--s3)">三師爸 Sense Bar ・ youtube.com/@sensebar</p>
 </div>
 </section>
 
@@ -624,8 +660,11 @@ table.tight td, table.tight th { padding: 9px 14px; font-size: clamp(15px,1.35vw
   const progress = document.getElementById('progress');
   const sectionTag = document.getElementById('section-tag');
   const pageInfo = document.getElementById('pageInfo');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
 
-  function show(idx) {
+  function show(idx, updateHash = true) {
+    if (idx < 0 || idx >= total) return;
     slides.forEach(s => s.classList.remove('active'));
     slides[idx].classList.add('active');
     const section = slides[idx].dataset.section || '';
@@ -633,14 +672,21 @@ table.tight td, table.tight th { padding: 9px 14px; font-size: clamp(15px,1.35vw
     progress.style.width = ((idx + 1) / total * 100) + '%';
     pageInfo.textContent = (idx + 1) + ' / ' + total;
     current = idx;
+    if (updateHash) history.replaceState(null, '', '#' + (idx + 1));
   }
 
   function next() { if (current < total - 1) show(current + 1); }
   function prev() { if (current > 0) show(current - 1); }
+  function fromHash() {
+    const n = parseInt(location.hash.replace('#', ''), 10);
+    if (Number.isInteger(n) && n >= 1 && n <= total) show(n - 1, false);
+  }
 
   document.addEventListener('keydown', e => {
-    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); next(); }
-    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); prev(); }
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); next(); }
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp' || e.key === 'PageUp') { e.preventDefault(); prev(); }
+    if (e.key === 'Home') { e.preventDefault(); show(0); }
+    if (e.key === 'End') { e.preventDefault(); show(total - 1); }
     if (e.key === 'f' || e.key === 'F') {
       if (!document.fullscreenElement) document.documentElement.requestFullscreen();
       else document.exitFullscreen();
@@ -648,10 +694,13 @@ table.tight td, table.tight th { padding: 9px 14px; font-size: clamp(15px,1.35vw
   });
 
   document.addEventListener('click', e => {
-    if (e.target.closest('table') || e.target.closest('.card') || e.target.closest('.code-block') || e.target.closest('.svg-wrap')) return;
+    if (e.target.closest('button') || e.target.closest('table') || e.target.closest('.card') || e.target.closest('.code-block') || e.target.closest('.svg-wrap')) return;
     if (e.clientX > window.innerWidth * 0.7) next();
     else if (e.clientX < window.innerWidth * 0.3) prev();
   });
+  prevBtn.addEventListener('click', e => { e.stopPropagation(); prev(); });
+  nextBtn.addEventListener('click', e => { e.stopPropagation(); next(); });
+  window.addEventListener('hashchange', fromHash);
 
   let startX = 0;
   document.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
@@ -660,7 +709,8 @@ table.tight td, table.tight th { padding: 9px 14px; font-size: clamp(15px,1.35vw
     if (Math.abs(diff) > 50) { diff > 0 ? next() : prev(); }
   });
 
-  show(0);
+  fromHash();
+  if (!location.hash) show(0, false);
 })();
 </script>
 

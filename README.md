@@ -12,11 +12,27 @@
 
 | 檔案 | 說明 |
 |------|------|
+| [`AGENT_SETUP_外部工具連接指南.md`](AGENT_SETUP_外部工具連接指南.md) | **給 AI Agent 讀的連接說明檔**（重點！見下方使用方式） |
 | [`slides.html`](slides.html) | EP04 完整簡報（20 頁，可離線開啟，← → 切頁、F 全螢幕） |
 | [`EP04_大綱.md`](EP04_大綱.md) | 本集完整大綱（含每段口白、口訣總表、拍攝節奏） |
 | [`基本功_外部工具連接方式總表.md`](基本功_外部工具連接方式總表.md) | AntiGravity／Codex 基本功中用過的外部工具連接路線總表 |
 | [`AGENTS.md`](AGENTS.md) | 給本專案 Agent 的工作邊界與外部引用註記 |
 | [`channel_key_pairing.svg`](channel_key_pairing.svg) | 「通道 × 鑰匙」搭配接線圖 |
+
+## 🤖 一句話讓你的 Agent 幫你接工具（重點！）
+
+把 [`AGENT_SETUP_外部工具連接指南.md`](AGENT_SETUP_外部工具連接指南.md) 交給你的 AI Agent
+（Claude Code / Codex / AntiGravity / OpenCode 都可以），然後說：
+
+> 「讀這份檔案，幫我把 **Google Drive**（或 Obsidian、Firebase、Padlet⋯）接起來。」
+
+**全新電腦也適用**——直接把這個網址丟給 Agent：
+
+```
+https://raw.githubusercontent.com/mathruffian-dot/ai-agent-ep04/master/AGENT_SETUP_外部工具連接指南.md
+```
+
+Agent 會自動：訪談你的需求 → 判斷該走哪條連接路 → 一步步帶你完成授權 → 實測驗收並記錄。
 
 ## 🗺️ 這集在講什麼
 

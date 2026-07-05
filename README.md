@@ -8,6 +8,10 @@
 
 👉 **[點我線上觀看簡報](https://mathruffian-dot.github.io/ai-agent-ep04/slides.html)**（GitHub Pages，手機也能看）
 
+## 🧱 直播資料牆（Padlet）
+
+👉 **[AI Agent 基本功 EP04｜連接外部工具](https://padlet.com/mathruffian/ai-agent-ep04-emmdoz714pd8hh1)** — 本集所有資料分區整理：簡報、給 AI Agent 的說明檔、核心地圖、repo、舊影片、投票與留言。
+
 ## 📦 這個 repo 有什麼
 
 | 檔案 | 說明 |

@@ -73,6 +73,18 @@ EP04 從零規劃完成，已產出三份交付物（都在 `EP04/`）：
 - **關鍵觀念入稿**：2026 年內建連接器底層幾乎全是 MCP（連接器＝原廠裝好的 remote MCP＋OAuth）；階梯 B 四階是「自己動手多少」的光譜、非互斥技術。口白：「拆開來看，走的都是同一條 MCP 標準線，差別只在誰幫你接。」
 - **三處同步**：大綱階梯 B 段（升級觀念＋四家對照表）、總表（四家連接器入口對照段）、簡報第 7 頁（補一行口白註記，頁數維持 20）。
 
+## ✅ 已完成（2026-07-05 直播 Padlet＋AGENT_SETUP 說明檔）
+
+- **新增 `AGENT_SETUP_外部工具連接指南.md`**：給任何 AI Agent 讀的連接說明檔（訪談→判路→執行→驗收，含四 Agent 設定入口、常見服務快查表、安全守則）。全新電腦用法：把 raw URL 丟給 Agent 即可。
+- **建立直播 Padlet**（依 `2026邀約/Padlet模組` 規格建板，引用模板：02_AI_Agent基本功＋08_建板規格表）：
+  - Padlet URL：https://padlet.com/mathruffian/ai-agent-ep04-emmdoz714pd8hh1
+  - QR Code：https://assets.padletcdn.com/padlets/emmdoz714pd8hh1/qr_code.png
+  - 建立時間：2026-07-05 ・ 建立者：Claude（padlet-mcp）
+  - 已確認區段 8 個：今日簡報／給 AI Agent 的說明檔／核心地圖與觀念／GitHub repo／參考資料與舊影片／新手起手式／投票活動／留言互動
+  - 已確認貼文 19 張（含 1 題投票，Padlet 投票上限 4 選項）
+  - 需手動補上：留言與 reactions 預設關閉，直播前到版子設定開啟；直播結束後可補 YouTube 直播回放連結
+- **README 更新**：新增「直播資料牆」連結＋「一句話讓 Agent 幫你接工具」重點段（含 raw URL）。
+
 ## ➡️ 下一步（未做，待決定）
 
 - [ ] Obsidian：可在「創作庫」新增 EP04 筆記（EP01–03 都有對應筆記）。

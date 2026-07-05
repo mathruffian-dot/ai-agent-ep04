@@ -14,6 +14,8 @@
 |------|------|
 | [`slides.html`](slides.html) | EP04 完整簡報（20 頁，可離線開啟，← → 切頁、F 全螢幕） |
 | [`EP04_大綱.md`](EP04_大綱.md) | 本集完整大綱（含每段口白、口訣總表、拍攝節奏） |
+| [`基本功_外部工具連接方式總表.md`](基本功_外部工具連接方式總表.md) | AntiGravity／Codex 基本功中用過的外部工具連接路線總表 |
+| [`AGENTS.md`](AGENTS.md) | 給本專案 Agent 的工作邊界與外部引用註記 |
 | [`channel_key_pairing.svg`](channel_key_pairing.svg) | 「通道 × 鑰匙」搭配接線圖 |
 
 ## 🗺️ 這集在講什麼
@@ -52,12 +54,7 @@
 
 ## 🎞️ 舊影片素材對照
 
-- GitHub／Obsidian：GPT Codex 基本功 EP03
-- Supabase：Claude 基本功 EP09
-- Firebase：Claude 基本功 EP095、GPTcodex 基本功 EP04
-- Classroom：AntiGravity 基本功 EP06
-- Padlet：AntiGravity 基本功 EP07
-- NotebookLM：Claude 基本功 EP03／EP04／EP06
+各服務對應的過往集數與連接路線，完整整理在 [`基本功_外部工具連接方式總表.md`](基本功_外部工具連接方式總表.md)（**唯一事實來源**，含每條路線的通道、授權與口訣）。
 
 ## 📺 相關集數
 

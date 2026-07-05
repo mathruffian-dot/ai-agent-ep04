@@ -1,7 +1,7 @@
 # EP04 交接檔（handoff）
 
 > 專案：《AI Agent 基本功》EP04 — 連接外部工具
-> 最後更新：2026-07-02 ・ 更新者：Codex（內容審核修訂）
+> 最後更新：2026-07-02 ・ 更新者：Claude（覆審 Codex 修訂＋番號校正）
 
 ## ⏯️ 目前做到哪
 
@@ -9,7 +9,9 @@ EP04 從零規劃完成，已產出三份交付物（都在 `EP04/`）：
 
 1. **`EP04_大綱.md`（v3，定稿）** — 完整大綱，含開場鉤子、核心地圖、兩條階梯、搭配圖說明、非 Google／Google 兩大段、操控畫面、三步選路、安全、新手起手式、口訣總表、60 分鐘節奏表、素材對照。
 2. **`slides.html`（20 頁）** — 沿用 EP03 深空主題框架，鍵盤／點擊／觸控切頁，可離線。第 8 頁嵌入搭配圖 SVG，第 19 頁為 QR 下載頁。
-3. **`channel_key_pairing.svg`** — 「通道×鑰匙」搭配接線圖（深空配色，獨立檔）。
+3. **`基本功_外部工具連接方式總表.md`** — AntiGravity／Codex 基本功中用過的外部工具連接路線總表。
+4. **`AGENTS.md`** — 本專案 Agent 工作邊界與外部 Padlet 模組引用註記。
+5. **`channel_key_pairing.svg`** — 「通道×鑰匙」搭配接線圖（深空配色，獨立檔）。
 
 ## 🧭 本集定案（重要脈絡）
 
@@ -37,14 +39,43 @@ EP04 從零規劃完成，已產出三份交付物（都在 `EP04/`）：
 - **補手機版排版**：`slides.html` 增加窄螢幕 CSS，手機寬度改為從上方開始排版，縮小表格、卡片與間距，避免長表格被置中裁掉。
 - **補簡報導覽**：`slides.html` 加入上一頁／下一頁按鈕、PageUp／PageDown、Home／End、URL hash 記頁功能，重新整理可回到目前頁。
 
+## ✅ 已完成（2026-07-02 路線總表補強）
+
+- **新增 `基本功_外部工具連接方式總表.md`**：整理 AntiGravity 與 Codex 基本功中實際用過的外部工具連接路線。
+- **AntiGravity 路線已收**：GitHub + Firebase、Netlify + GAS、Google Classroom、Padlet。
+- **Codex 路線已收**：GitHub + Obsidian、Firebase、外掛 + Skills。
+- **刻意未納入**：Google 雲端／GCP 細部設定與 Gemini Canvas，依使用者要求本次不碰。
+- **README / 大綱已掛連結與對照**：README 檔案表新增總表；大綱「引用既有素材」補 AntiGravity／Codex 路線。
+
+## ✅ 已完成（2026-07-02 Padlet 模組引用註記）
+
+- **新增 EP04 `AGENTS.md`**：標明可引用外部 Padlet 模組：`G:\我的雲端硬碟\2026邀約\Padlet模組`。
+- **新增 Padlet 模組 `AGENTS.md`**：標明模板使用順序、引用註記、Do / Don't、安全限制。
+- **更新 Padlet 模組索引**：`00_Padlet模組索引.md` 增加 Agent 引用註記。
+- **更新 README**：新增「Padlet 模組引用」段落，說明外部來源、用途與安全邊界。
+- **引用規則**：可引用模板架構、建板規格與檢核清單；不要把 Padlet token、API key、登入資訊、學生個資放進 repo 或共用模板。
+
+## ✅ 已完成（2026-07-02 Claude 覆審修訂）
+
+- **番號校正（對 Obsidian vault 逐一驗證）**：
+  - `EP095` → **`EP09.5`**（Claude基本功EP09.5 - Firebase串接免費資料庫），README／大綱／總表三處統一。
+  - 系列名稱統一為 vault 標題格式：**「Codex基本功 EPxx」**（原混用 GPT Codex／GPTcodex／Codex 三種寫法）。
+  - **GitHub + Firebase 路線代表片：EP03 → EP05**。經 AntiGravity 系列索引驗證：EP03=Netlify+GAS+GitHub（無 Firebase）；**Firebase 在 EP05**《用AI打造教學網頁的五個階段》。
+  - **NotebookLM 引用修正**：原「Claude EP03／04／06」→「Claude基本功 EP03／EP04、**GoogleAI基本功 EP06**」。Claude EP06 是駕駛艙集；《Notebook LM 五大場景》其實是 GoogleAI基本功 EP06。
+  - **拿掉總表對「GoogleAI EP05」的引用**：該集是 Google Canvas，與總表自己聲明的排除範圍矛盾。
+- **公開／內部資訊分界**：README 移除「Padlet 模組引用」段（含本機路徑，屬內部指引，AGENTS.md 已完整涵蓋）。
+- **對照表收斂為單一事實來源**：舊影片對照統一以 `基本功_外部工具連接方式總表.md` 為準；README 與大綱尾段改為指向總表，內文回扣表保留（避免三份對照彼此漂移）。
+- **commit + push**：總表、AGENTS.md 與本輪修訂已進版並部署。
+
 ## ➡️ 下一步（未做，待決定）
 
 - [ ] Obsidian：可在「創作庫」新增 EP04 筆記（EP01–03 都有對應筆記）。
 - [ ] 錄製前可再做一次口白稿。
-- [ ] 若要部署最新版，請 commit/push 這次 Codex 修訂，讓 GitHub Pages 更新。
 - [ ] 影片上架後，把實際 YouTube 連結補進 README。
+- [ ] （vault 待修）Obsidian《AntiGravity基本功》索引裡 EP03 的 YouTube 連結指到 dQw4w9WgXcQ（Rick Astley），應是佔位符沒換掉。
 
 ## ⚠️ 注意事項
 
 - `slides.html` 的 SVG 是**深空配色硬寫**（非白底），只適合這份深色簡報。
 - Codex 內建連接器等產品細節在 2026-07 查證過（Codex MCP 官方文件），錄製前可再確認一次時效。
+- Padlet 模組是外部共用資料夾，不屬於本 repo；引用時要註明來源路徑與實際模板檔名。

@@ -1,7 +1,7 @@
 # EP04 交接檔（handoff）
 
 > 專案：《AI Agent 基本功》EP04 — 連接外部工具
-> 最後更新：2026-07-02 ・ 更新者：Claude（覆審 Codex 修訂＋番號校正）
+> 最後更新：2026-07-11 ・ 更新者：Claude（AGENT_SETUP v2 全面盤點更新＋README 補影片連結）
 
 ## ⏯️ 目前做到哪
 
@@ -85,12 +85,24 @@ EP04 從零規劃完成，已產出三份交付物（都在 `EP04/`）：
   - 需手動補上：留言與 reactions 預設關閉，直播前到版子設定開啟；直播結束後可補 YouTube 直播回放連結
 - **README 更新**：新增「直播資料牆」連結＋「一句話讓 Agent 幫你接工具」重點段（含 raw URL）。
 
+## ✅ 已完成（2026-07-11 AGENT_SETUP v2 全面盤點更新）
+
+- **背景**：影片已上架（https://youtu.be/-kIzGOf0bZA）。使用者要求以初學者視角全面盤點 `AGENT_SETUP_外部工具連接指南.md`，並依四款桌面版 Agent（Claude Code／ChatGPT App 含 Codex／Antigravity 2／OpenCode）的實際狀況優化、常用工具優先。
+- **查證發現（2026-07-11，官方文件＋社群來源）**：
+  1. **ChatGPT：2026-07-09 起 Apps 目錄併入 Plugins**（apps 概念仍在，但入口改版）；自訂 MCP 要開 Developer mode（`Settings → Security and login`，**僅網頁版可開**、需付費方案）。
+  2. **Antigravity 2**：MCP 設定統一為 `~/.gemini/config/mcp_config.json`（IDE／CLI 共用）；MCP Store 在 `Settings → Customizations`；遠端 server 用 `serverUrl`（非 `httpUrl`）；JSON 不能寫註解；有回報全域設定環境變數帶不進去。
+  3. **Claude Code Windows 大坑**：npx 型 stdio MCP 必須包 `cmd /c`，否則顯示已裝但永遠連不上（老師多用 Windows，列為第一優先補強）。
+  4. **OpenCode**：補齊 local／remote 兩型 JSON 範例、全域設定檔路徑 `~/.config/opencode/opencode.json`、MCP 吃 context 的提醒。
+- **AGENT_SETUP v2 主要變更**：四 Agent 名稱對齊（Codex→ChatGPT App 含 Codex、AntiGravity→Antigravity 2）；入口總覽表加「驗證方式」欄；新增四 Agent 各自的具體指令小節（含 Windows 版指令）；常見服務快查表改依老師常用程度排序（Google 三兄弟→Obsidian→NotebookLM→GitHub→Padlet→Classroom→Firebase→Supabase→Notion）；新增〈常見卡關排除〉症狀對照表（8 條）；補「問 Agent 你有哪些 MCP 工具」通用驗證招；版本註記改 v2。
+- **同步更新**：總表〈四家 Agent 連接器入口對照〉改為 2026-07-11 查證版；README 補影片連結（新增「📺 本集影片」段＋相關集數掛連結）＋四 Agent 名稱對齊。
+- **刻意不動**：`EP04_大綱.md` 與 `slides.html`（影片已上架，屬歷史素材，避免與影片內容漂移）。
+
 ## ➡️ 下一步（未做，待決定）
 
 - [ ] Obsidian：可在「創作庫」新增 EP04 筆記（EP01–03 都有對應筆記）。
-- [ ] 錄製前可再做一次口白稿。
-- [ ] 影片上架後，把實際 YouTube 連結補進 README。
+- [x] ~~影片上架後，把實際 YouTube 連結補進 README。~~（2026-07-11 已補）
 - [ ] （vault 待修）Obsidian《AntiGravity基本功》索引裡 EP03 的 YouTube 連結指到 dQw4w9WgXcQ（Rick Astley），應是佔位符沒換掉。
+- [ ] ChatGPT Plugins 改版才剛發生（2026-07-09），一兩個月後可再確認一次入口名稱是否又變。
 
 ## ⚠️ 注意事項
 
